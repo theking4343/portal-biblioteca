@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px 30px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+.disponible {
+    color: green;
+    font-weight: bold;
+}
+
+.no-disponible {
+    color: red;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.ok {
+    color: green;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+}
+
+form input {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 8px 16px;
+}

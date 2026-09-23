@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    {% if request.args.get('logout') %}
+        <p class="ok">Sesión cerrada correctamente.</p>
+    {% endif %}
+
+    {% if ultimo_usuario %}
+        <p>Último usuario registrado: {{ ultimo_usuario }}.</p>
+        <a href="{{ url_for('eliminar_cookie') }}">Eliminar cookie</a>
+    {% else %}
+        <p>Bienvenido al Portal de Biblioteca.</p>
+    {% endif %}
+{% endblock %}

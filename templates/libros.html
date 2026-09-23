@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Libros{% endblock %}
+
+{% block content %}
+    {% if bienvenida and usuario %}
+        <p class="ok">Bienvenido, {{ usuario }}. Iniciaste sesión correctamente.</p>
+    {% endif %}
+
+    <h2>Libros disponibles</h2>
+
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Estado</th>
+        </tr>
+        {% for libro in libros %}
+        <tr>
+            <td>{{ libro.titulo }}</td>
+            <td>{{ libro.autor }}</td>
+            <td>
+                {% if libro.disponibles > 0 %}
+                    <span class="disponible">Disponible ({{ libro.disponibles }})</span>
+                {% else %}
+                    <span class="no-disponible">No disponible</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
